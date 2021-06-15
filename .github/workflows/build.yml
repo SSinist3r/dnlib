@@ -1,22 +1,6 @@
 name: GitHub CI
-on:
-  push:
-    paths:
-      - '.github/workflows/**'
-      - 'Examples/**'
-      - 'src/**'
-      - '!**/*.md'
-    branches:
-      - master
-  pull_request:
-    paths:
-      - 'Examples/**'
-      - 'src/**'
-      - '!**/*.md'
-    branches:
-      - master
-  release:
-    types: released
+
+on: [push, workflow_dispatch]
 
 env:
   CI_REQ_DOTNET_SDK_VER: 5.0.100
